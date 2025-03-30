@@ -9,14 +9,13 @@ This repository is the official implementation of [RealVVT](https://arxiv.org/ab
 [[arXiv Paper](https://arxiv.org/abs/2501.08682)]&nbsp;
 <!-- [[Project Page](https://rlawjdghek.github.io/StableVITON/)]&nbsp; -->
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <video src="65.mp4" controls width="48%"></video>
-  <video src="assets/1222216.mp4" controls width="48%"></video>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <video src="65.mp4" controls width="48%"></video>
-  <video src="assets/1242188.mp4" controls width="48%"></video>
-</div>
+<p align="center">
+  <img src="assets/1.gif" width="45%">
+  <img src="assets/2.gif" width="45%">
+  <br>
+  <img src="assets/3.gif" width="45%">
+  <img src="assets/4.gif" width="45%">
+</p>
 
 ## TODO List
 - [x] ~~Inference code~~
