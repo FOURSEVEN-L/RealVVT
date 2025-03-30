@@ -3,7 +3,7 @@
 
 ## 📰 News
 
-- [2024-07-12] Code released for `RealVVT`.
+- [2025-03-31] Code released for `RealVVT`.
 
 ## 🚀 Quick Start
 > **Setup Environment**
