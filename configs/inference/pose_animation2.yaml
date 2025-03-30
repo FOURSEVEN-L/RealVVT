@@ -1,0 +1,91 @@
+data:
+  train_bs: 1
+  train_width: 640
+  train_height: 960
+  # Margin of frame indexes between ref and tgt images
+  sample_rate: 10 
+  n_sample_frames: 16
+  num_workers: 4
+  fps: 6
+  motion_bucket_id: 40
+
+noise_scheduler:
+  P_mean: 0.7
+  P_std: 1.6
+  sigma_data: 1
+
+val_data:
+  infer_width: 640
+  infer_height: 960
+  num_frames: 14
+  decode_chunk_size: 8
+  motion_bucket_id: 40
+  fps: 6
+  noise_aug_strength: 0.02
+  num_inference_steps: 25
+  min_guidance_scale: 1.0
+  max_guidance_scale: 3.0
+  tile_size: 14
+  tile_overlap: 2
+  ref_images:
+    - "./test_data/images/1222781_in_xl.jpg"
+    - "./test_data/images/1237708_in_xl.jpg"
+    - "./test_data/images/1237535_in_xl.jpg"
+  drive_poses:
+    - "./test_data/densepose/1222502_detail.mp4"
+    - "./test_data/densepose/543002_detail.mp4"
+    - "./test_data/densepose/1222596_detail.mp4"
+  pixel_values:
+    - "./test_data/videos/1222502_detail.mp4"
+    - "./test_data/videos/543002_detail.mp4"
+    - "./test_data/videos/1222596_detail.mp4"
+  pixel_values_video_mask:
+    - "./test_data/agnostic_mask/1222502_detail.mp4"
+    - "./test_data/agnostic_mask/543002_detail.mp4"
+    - "./test_data/agnostic_mask/1222596_detail.mp4"
+  pixel_agnostic:
+    - "./test_data/agnostic/1222502_detail.mp4"
+    - "./test_data/agnostic/543002_detail.mp4"
+    - "./test_data/agnostic/1222596_detail.mp4"
+solver:
+  gradient_accumulation_steps: 1
+  mixed_precision: 'fp16'
+  enable_xformers_memory_efficient_attention: False
+  gradient_checkpointing: True 
+  max_train_steps: 100000
+  
+  max_grad_norm: 1.0
+  # lr
+  learning_rate: 1.0e-5
+  scale_lr: False 
+  lr_warmup_steps: 500
+  lr_scheduler: 'constant'
+
+  # optimizer
+  use_8bit_adam: False
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_weight_decay:  1.0e-2
+  adam_epsilon: 1.0e-8
+
+allow_tf32: True
+total_limit: 20
+save_model_epoch_interval: 20
+use_ema: False
+random_null_ratio: 0.05
+checkpointing_steps: 2000
+pretrained_model_name_or_path: "../pretrained_weights/stable-video-diffusion-img2vid-xt"
+pretrained_sd_model_name_or_path: "../pretrained_weights/stable-diffusion-2-1"
+
+
+
+
+reference_net_checkpoint_path: "../animate/exp_outs_81/lr_5_5_xt_16frames_384x512_bs2/model_reference_net-9000.pth"
+unet_checkpoint_path: "../animate/exp_outs_81/lr_5_5_xt_16frames_384x512_bs2/model_unet-9000.pth"
+pose_guider_checkpoint_path: "../animate/exp_outs_81/lr_5_5_xt_16frames_384x512_bs2/model_pose_guider-9000.pth"
+resume_from_checkpoint: True
+pose_guider_pretrain: True
+
+seed: 1234
+exp_name: 'lr_5_5_xt_16frames_384x512_bs2'
+output_dir: '../animate/exp_inference2'   
