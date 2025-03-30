@@ -1,9 +1,9 @@
-# Magic-I2V: Multi-Modality Signal Controled I2V Tasks
+# RealVVT: Towards Photorealistic Video Virtual Try-on via Spatio-Temporal Consistency
 
 
 ## 📰 News
 
-- [2024-07-12] Code released for `VividPose`.
+- [2024-07-12] Code released for `RealVVT`.
 
 ## 🚀 Quick Start
 > **Setup Environment**
