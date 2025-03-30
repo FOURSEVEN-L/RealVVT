@@ -47,7 +47,7 @@ from src.utils.utils import (
 class AnimateController:
     def __init__(
         self,
-        config_path="./configs/inference/pose_animation2.yaml",
+        config_path="./configs/inference/videovvt2.yaml",
         weight_dtype=torch.float16,
     ):
         # Read pretrained weights path from config
