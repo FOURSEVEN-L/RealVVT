@@ -62,7 +62,7 @@ This preprocessing step requires generating body-agnostic representations. You c
 
 ### Densepose video
 See [vid2densepose](https://github.com/Flode-Labs/vid2densepose).(follow [ViViD](https://github.com/alibaba-yuanjing-aigclab/ViViD))
-## Inference0
+## Inference
 ```bash
 sh ./run_inference_json.sh
 ```
