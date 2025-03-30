@@ -1,4 +1,4 @@
-name: i2v_adapter
+name: RealVVT
 channels:
   - pytorch
   - nvidia
