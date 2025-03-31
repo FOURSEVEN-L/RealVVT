@@ -637,7 +637,7 @@ def main(cfg):
             
             loss_idx = random.choices([0, 1], weights=[1, 1])[0]    
          
-            
+            # Agnostic Mask-Guided Attention for Clothing Consistency
             if loss_idx == 1:
                 attention_map_dict = aggregate_attention(
                     attention_store=controller,
