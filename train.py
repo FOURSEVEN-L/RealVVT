@@ -635,7 +635,7 @@ def main(cfg):
             # Gather the losses across all processes for logging (if we use distributed training).
             # todo
             
-            loss_idx = random.choices([0, 1], weights=[1, 1])[0]    
+            loss_idx = random.choices([0, 1], weights=[5, 1])[0]    
          
             # Agnostic Mask-Guided Attention for Clothing Consistency
             if loss_idx == 1:
