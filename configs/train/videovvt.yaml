@@ -22,7 +22,7 @@ data:
   # Margin of frame indexes between ref and tgt images
   sample_rate: 10 
   n_sample_frames: 16
-  obpos_loss_weight: 0.05
+  obpos_loss_weight: 0.5
   obneg_loss_weight: 0.005
   num_workers: 4
   fps: 7
